@@ -1,5 +1,6 @@
 // Metropolitan Museum of Art
-var queryURLMet = "https://collectionapi.metmuseum.org/public/collection/v1/search?q=sunflowers";
+// Need to input the searchbox Var once the search box has been created by other team member
+var queryURLMet = "https://collectionapi.metmuseum.org/public/collection/v1/search?q=italy";
 
 // SearchBox
 // var searchBox = $(<"inputBox">);
@@ -21,10 +22,12 @@ $.ajax({
 
     var results = response.objectIDs;
     // var resultImage = results[0];
-    // console.log(results[0].primaryImage);
+    console.log(results);
+        for (let i = 0; i < results.length; i++) {
         
+    
     $.ajax({
-        url: "https://collectionapi.metmuseum.org/public/collection/v1/objects/" + results[0] ,
+        url: "https://collectionapi.metmuseum.org/public/collection/v1/objects/" + i,
         method: "GET"
       }).then(function(response) {
             var results = "https://collectionapi.metmuseum.org/public/collection/v1/objects/"
@@ -33,7 +36,7 @@ $.ajax({
 
 
       });
-            
+        }        
     // console.log(response.objectIDs[0].primaryImage);
     
 // Working on for loop which will take the api search results and end result will be to extract the
