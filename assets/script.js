@@ -18,10 +18,30 @@ $.ajax({
     url: queryURLMet,
     method: "GET"
   }).then(function(response) {
-    
-    var results = response.objectIDs;
 
-    // url for images
+    var results = response.objectIDs;
+    // var resultImage = results[0];
+    // console.log(results[0].primaryImage);
+        
+    $.ajax({
+        url: "https://collectionapi.metmuseum.org/public/collection/v1/objects/" + results[0] ,
+        method: "GET"
+      }).then(function(response) {
+            var results = "https://collectionapi.metmuseum.org/public/collection/v1/objects/"
+            console.log(response.primaryImage);
+            
+
+
+      });
+            
+    // console.log(response.objectIDs[0].primaryImage);
+    
+// Working on for loop which will take the api search results and end result will be to extract the
+//  primaryImage URL to display on the page
+// index[].primaryImage   
+
+
+// url for images
     // https://collectionapi.metmuseum.org/public/collection/v1/objects/21693
 
     // below are the object names{
