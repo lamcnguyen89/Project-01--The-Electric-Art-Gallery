@@ -24,17 +24,29 @@ $.ajax({
     var results = response.objectIDs;
     // var resultImage = results[0];
     console.log(results);
-        for (let i = 0; i < results.length; i++) {
+        for (let i = 0; i < 10 ; i++) {
         
     
     $.ajax({
-        url: "https://collectionapi.metmuseum.org/public/collection/v1/objects/" + i,
+        url: "https://collectionapi.metmuseum.org/public/collection/v1/objects/" + results[i],
         method: "GET"
       }).then(function(response) {
             var results = "https://collectionapi.metmuseum.org/public/collection/v1/objects/"
             console.log(response.primaryImage);
+            var artistName = response.artistDisplayName;
+            console.log("Artist Name: " + artistName);
+            var artTitle = response.title;
+            console.log("Art Title: " + artTitle);
+            var artistCulture = response.culture;
+            console.log("Artist Origin: " + artistCulture);
             
-
+            
+            var artImageURL = response.primaryImage;
+            var artImageSrc = $("<img>").attr("src", artImageURL);
+            //$("div to hold the image").append(artImageSrc)
+            //$("div to hold the artist name below the image").append(artistName)
+            //$("div to hold the artwork Title below the image").append(artTitle)
+            //$("div to hold the Artist Origin below the image").append(artistCulture)
 
       });
         }        
