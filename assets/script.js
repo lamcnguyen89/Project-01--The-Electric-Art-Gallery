@@ -24,16 +24,17 @@ $.ajax({
     var results = response.objectIDs;
     // var resultImage = results[0];
     console.log(results);
-        for (let i = 0; i < results.length; i++) {
+        for (let i = 0; i < 20 ; i++) {
         
     
     $.ajax({
-        url: "https://collectionapi.metmuseum.org/public/collection/v1/objects/" + i,
+        url: "https://collectionapi.metmuseum.org/public/collection/v1/objects/" + results[i],
         method: "GET"
       }).then(function(response) {
             var results = "https://collectionapi.metmuseum.org/public/collection/v1/objects/"
             console.log(response.primaryImage);
-            
+            var artImageURL = response.primaryImage;
+            var artImageSrc = $("<img>").attr("src", artImageURL);
 
 
       });
