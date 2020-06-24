@@ -24,7 +24,7 @@ $.ajax({
     var results = response.objectIDs;
     // var resultImage = results[0];
     console.log(results);
-        for (let i = 0; i < 10 ; i++) {
+        for (let i = 0; i < 1 ; i++) {
         
     
     $.ajax({
@@ -47,7 +47,7 @@ $.ajax({
             $(".desc").append(artistName)
             $(".desc").append(artTitle)
             $(".desc").append(artistCulture)
-
+              
       });
         }        
     // console.log(response.objectIDs[0].primaryImage);
