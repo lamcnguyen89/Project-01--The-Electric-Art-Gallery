@@ -43,10 +43,10 @@ $.ajax({
             
             var artImageURL = response.primaryImage;
             var artImageSrc = $("<img>").attr("src", artImageURL);
-            //$("div to hold the image").append(artImageSrc)
-            //$("div to hold the artist name below the image").append(artistName)
-            //$("div to hold the artwork Title below the image").append(artTitle)
-            //$("div to hold the Artist Origin below the image").append(artistCulture)
+            $(".artPiece").append(artImageSrc)
+            $(".desc").append(artistName)
+            $(".desc").append(artTitle)
+            $(".desc").append(artistCulture)
 
       });
         }        
