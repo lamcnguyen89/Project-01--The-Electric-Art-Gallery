@@ -128,19 +128,26 @@ color: white;
   background-color:  rgba(104, 45, 30, 0.555);
   color: white;
   text-align: center;
+  padding-top: 10px;
+  text-align: center;
 }
+
 
 .missionStatement{
   background-color:rgb(89, 61, 54, .7);
   border: 1px solid black;
   align-self: center;
-  padding: 50px;
-  margin-top: 34px;
+  padding: 50px; 
   margin-left: 20%;
   margin-right: 20%;
   color: white;
+  
 }
 
+.missionStatement h2{
+  text-align: center;
+  margin-bottom: 30px;
+}
 
 /* ///gallery */
 div.gallery {
@@ -163,3 +170,4 @@ div.desc {
   padding: 15px;
   text-align: center;
 }
+
