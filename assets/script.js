@@ -4,7 +4,7 @@ var queryURLMet = "https://collectionapi.metmuseum.org/public/collection/v1/sear
 // var queryURLMet = "https://collectionapi.metmuseum.org/public/collection/v1/search?q=artistDisplayName=pizza";
 
 // SearchBox
-// var searchBox = $(<"inputBox">);
+// var searchBox = $("inputBox");
 
 
 // Search
@@ -45,10 +45,8 @@ $.ajax({
             var artImageURL = response.primaryImage;
             var artImageSrc = $("<img>").attr("src", artImageURL).attr("class", "galleryImg");
 
-            // Testing for Loop
-            
-              console.log("results log " + results);
-              
+            // Having images load in seperate divs side by side, css adjustments to have the board align correctly
+                
             var mainImgDiv = $("<div>").attr("class","desc" );
             
             mainImgDiv.append("Artist Name: " + artistName)
