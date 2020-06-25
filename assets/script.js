@@ -24,13 +24,14 @@ $.ajax({
     var results = response.objectIDs;
     // var resultImage = results[0];
     console.log(results);
-        for (let i = 0; i < 1 ; i++) {
+        for (let i = 0; i < 8 ; i++) {
         
     
     $.ajax({
         url: "https://collectionapi.metmuseum.org/public/collection/v1/objects/" + results[i],
         method: "GET"
       }).then(function(response) {
+            
             var results = "https://collectionapi.metmuseum.org/public/collection/v1/objects/"
             console.log("image to be displayed: " + response.primaryImage);
             var artistName = response.artistDisplayName;
@@ -42,19 +43,21 @@ $.ajax({
             
             
             var artImageURL = response.primaryImage;
-            var artImageSrc = $("<img>").attr("src", artImageURL);
+            var artImageSrc = $("<img>").attr("src", artImageURL).attr("class", "galleryImg");
 
             // Testing for Loop
             
+              console.log("results log " + results);
+              
+            var mainImgDiv = $("<div>").attr("class","desc" );
             
-            
-            $(".gallery").append(artImageSrc)
-            $(".desc").append("Artist Name: " + artistName)
-            $(".desc").append("<hr>")
-            $(".desc").append("Artwork Title: " + artTitle)
-            $(".desc").append("<hr>")
-            $(".desc").append("Artist Origin: " + artistCulture)
-            
+            mainImgDiv.append("Artist Name: " + artistName)
+            mainImgDiv.append("<hr>")
+            mainImgDiv.append("Artwork Title: " + artTitle)
+            mainImgDiv.append("<hr>")
+            mainImgDiv.append("Artist Origin: " + artistCulture)
+            mainImgDiv.append(artImageSrc)
+            $(".gallery").append(mainImgDiv);
       });
 
         
