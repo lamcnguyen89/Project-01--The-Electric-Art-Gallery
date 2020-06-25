@@ -1,21 +1,24 @@
 // Metropolitan Museum of Art
 // Need to input the searchbox Var once the search box has been created by other team member
-var queryURLMet = "https://collectionapi.metmuseum.org/public/collection/v1/search?q=david";
+var queryURLMet = "https://collectionapi.metmuseum.org/public/collection/v1/search?q=" + searchBox;
 // var queryURLMet = "https://collectionapi.metmuseum.org/public/collection/v1/search?q=artistDisplayName=pizza";
 
 // SearchBox
-// var searchBox = $("inputBox");
+var searchBox = $("#searchBar");
+var searchBoxValue = "";
+console.log("Search box value" + searchBoxValue);
+
+// search button code
+$("#searchBtn").on("click", function(){
+  searchBoxValue = $("#searchBox").val;
+
+});
 
 
-// Search
-// GET /public/collection/v1/search returns a listing of 
-// all Object IDs for objects that contain the search query within the object’s data
-
-// example of a search for sunflowers
-// https://collectionapi.metmuseum.org/public/collection/v1/search?q=sunflowers
-// https://collectionapi.metmuseum.org/public/collection/v1/search? "q=sunflowers" this should be the var for the input box
 
 
+
+// Start of API Pull Request
 $.ajax({
     url: queryURLMet,
     method: "GET"
@@ -24,7 +27,7 @@ $.ajax({
     var results = response.objectIDs;
     // var resultImage = results[0];
     console.log(results);
-        for (let i = 0; i < 8 ; i++) {
+        for (let i = 0; i < 1 ; i++) {
         
     
     $.ajax({
@@ -61,23 +64,13 @@ $.ajax({
         
       // End of first for statement
         }        
-    // console.log(response.objectIDs[0].primaryImage);
+
     
-// Working on for loop which will take the api search results and end result will be to extract the
-//  primaryImage URL to display on the page
-// index[].primaryImage   
+
 
 
 // url for images
     // https://collectionapi.metmuseum.org/public/collection/v1/objects/21693
-
-    // below are the object names{
-// "objectID": 21693,
-// "isHighlight": false,
-
-
-// "isPublicDomain": true,
-// "primaryImage": "https://images.metmuseum.org/CRDImages/ad/original/DP300700.jpg",
 
 
 // "constituents": [
