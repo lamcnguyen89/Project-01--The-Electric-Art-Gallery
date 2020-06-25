@@ -1,7 +1,7 @@
 // Metropolitan Museum of Art
 // Need to input the searchbox Var once the search box has been created by other team member
 var queryURLMet = "https://collectionapi.metmuseum.org/public/collection/v1/search?q=sun";
-// var queryURLMet = "https://collectionapi.metmuseum.org/public/collection/v1/search?q=artistDisplayName=Claude Monet";
+// var queryURLMet = "https://collectionapi.metmuseum.org/public/collection/v1/search?q=artistDisplayName=pizza";
 
 // SearchBox
 // var searchBox = $(<"inputBox">);
@@ -44,9 +44,9 @@ $.ajax({
             var artImageURL = response.primaryImage;
             var artImageSrc = $("<img>").attr("src", artImageURL);
             $(".artPiece").append(artImageSrc)
-            $(".desc").append(artistName)
-            $(".desc").append(artTitle)
-            $(".desc").append(artistCulture)
+            $(".desc").append("Artist Name: " + artistName)
+            $(".desc").append("Artwork Title: " + artTitle)
+            $(".desc").append("Artist Origin: " + artistCulture)
               
       });
         }        
