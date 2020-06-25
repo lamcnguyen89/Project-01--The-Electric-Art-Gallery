@@ -14,7 +14,6 @@ html,body
     /* opacity: 40%; */
     font-family: Arial;
     height: 70px;
-    
   }
   
   /* Links inside the navbar */
@@ -33,6 +32,7 @@ html,body
     float: left;
     overflow: hidden;
     margin-top: 10px;
+    
   }
   
   /* Dropdown button */
@@ -83,6 +83,15 @@ html,body
     display: block;
   }
 
+  .mapNav{
+    size: 100%;
+  background-color:  rgba(104, 45, 30, 0.555);
+color: black;
+
+  }
+
+
+
 /* //////hero  */
 
 
@@ -115,7 +124,7 @@ color: white;
 
 .mapApi{
   background-color: rgba(0, 0, 0, 0.5);
- z-index: 1000;
+
 }
 
 /* /////footer */
@@ -185,4 +194,3 @@ div.desc {
   padding: 15px;
   text-align: center;
 }
-
