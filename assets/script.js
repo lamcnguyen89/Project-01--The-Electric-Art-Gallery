@@ -1,6 +1,6 @@
 // Metropolitan Museum of Art
 // Need to input the searchbox Var once the search box has been created by other team member
-var queryURLMet = "https://collectionapi.metmuseum.org/public/collection/v1/search?q=sun";
+var queryURLMet = "https://collectionapi.metmuseum.org/public/collection/v1/search?q=david";
 // var queryURLMet = "https://collectionapi.metmuseum.org/public/collection/v1/search?q=artistDisplayName=pizza";
 
 // SearchBox
@@ -32,7 +32,7 @@ $.ajax({
         method: "GET"
       }).then(function(response) {
             var results = "https://collectionapi.metmuseum.org/public/collection/v1/objects/"
-            console.log(response.primaryImage);
+            console.log("image to be displayed: " + response.primaryImage);
             var artistName = response.artistDisplayName;
             console.log("Artist Name: " + artistName);
             var artTitle = response.title;
@@ -43,12 +43,22 @@ $.ajax({
             
             var artImageURL = response.primaryImage;
             var artImageSrc = $("<img>").attr("src", artImageURL);
-            $(".artPiece").append(artImageSrc)
+
+            // Testing for Loop
+            
+            
+            
+            $(".gallery").append(artImageSrc)
             $(".desc").append("Artist Name: " + artistName)
+            $(".desc").append("<hr>")
             $(".desc").append("Artwork Title: " + artTitle)
+            $(".desc").append("<hr>")
             $(".desc").append("Artist Origin: " + artistCulture)
-              
+            
       });
+
+        
+      // End of first for statement
         }        
     // console.log(response.objectIDs[0].primaryImage);
     
