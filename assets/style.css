@@ -151,22 +151,37 @@ color: white;
 
 /* ///gallery */
 div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 180px;
+  /* margin: 5px; */
+  /* border: 1px solid #ccc; */
+  /* float: left; */
+  width: 100%;
 }
 
-div.gallery:hover {
+.galleryImg {
+  width: 100%;
+
+
+
+}
+
+
+/* div.gallery:hover {
   border: 1px solid #777;
 }
 
 div.gallery img {
   width: 100%;
   height: auto;
-}
+} */
 
 div.desc {
+  color: white;
+  height:483px;
+  width: 19%;
+  float: left;
+  margin-right: 5px;
+  border: 1px solid #ccc;
+  /* border-bottom: 0px; */
   padding: 15px;
   text-align: center;
 }

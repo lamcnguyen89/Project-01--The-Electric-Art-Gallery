@@ -53,16 +53,16 @@
         function initMap() {
             // var HarvordLat
             // var HarvordLon
-            var myLatlng = { lat:42.3740898, lng: -71.1165522 };
-            var myLatlng = new google.maps.LatLng(42.3740898,-71.1165522);
+            var harLatlng = { lat:42.3740898, lng: -71.1165522 };
+            var harLatlng = new google.maps.LatLng(42.3740898,-71.1165522);
 var mapOptions = {
   zoom: 4,
-  center: myLatlng
+  center: harLatlng
 }
 var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
 var marker = new google.maps.Marker({
-    position: myLatlng,
+    position: harLatlng,
     title:"Hello World!"
 });
 
@@ -71,11 +71,11 @@ marker.setMap(map);
 
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 4,
-                center: myLatlng
+                center: harLatlng
             });
 
             var marker = new google.maps.Marker({
-                position: myLatlng,
+                position: harLatlng,
                 map: map,
                 title: 'Click to zoom'
             });
