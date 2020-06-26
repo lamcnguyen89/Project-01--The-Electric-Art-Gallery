@@ -8,6 +8,7 @@ html,body
 }
 
 
+
 .navbar {
     overflow: hidden;
     background-color: rgba(104, 45, 30, 0.555);
@@ -167,8 +168,7 @@ div.gallery {
 
 .galleryImg {
   width: 100%;
-
-
+/* testing   */
 
 }
 

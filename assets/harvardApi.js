@@ -1,10 +1,8 @@
 var harvardAPIkey = "55f7f2b0-b577-11ea-a0ef-01159045190f";
 var baseHarvardURL = "https://api.harvardartmuseums.org/object?q=displayname:";
-let firstName = "Edvard";
-let lastName = "Munch"
-
+let artist = "Pablo Picasso";
   
-var queryHarvardURL = baseHarvardURL + firstName+ "%20"+ lastName +"&size=100&apikey=" + harvardAPIkey;
+var queryHarvardURL = baseHarvardURL + artist +"&size=100&apikey=" + harvardAPIkey;
  console.log("Harvard API URL: " + queryHarvardURL)
 
  $.ajax({
@@ -52,8 +50,10 @@ var queryHarvardURL = baseHarvardURL + firstName+ "%20"+ lastName +"&size=100&ap
                 createElements();
                 
             } else {
-                var artImageSrc = $("<img>").attr("src", urlImage).attr("class", "urlImage");
-                createElements();     
+                // var artImageSrc = $("<img>").attr("src", urlImage).attr("class", "urlImage");
+                // createElements(); 
+              
+                  
             };  
      };
 
