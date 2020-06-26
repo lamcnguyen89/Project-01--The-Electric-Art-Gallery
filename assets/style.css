@@ -8,9 +8,10 @@ html,body
 }
 
 
+
 .navbar {
     overflow: hidden;
-    background-color rgba(104, 45, 30, 0.555);
+    background-color: rgba(104, 45, 30, 0.555);
     /* opacity: 40%; */
     font-family: Arial;
     height: 70px;
@@ -83,14 +84,13 @@ html,body
     display: block;
   }
 
-  .mapNav{
-    size: 100%;
+
+div.navbar.mapNav{
+  size: 100%;
   background-color:  rgba(104, 45, 30, 0.555);
 color: black;
-
-  }
-
-
+z-index: 200;
+}
 
 /* //////hero  */
 
