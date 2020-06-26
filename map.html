@@ -59,7 +59,6 @@
             </button>
             <div class="dropdown-content">
                 <a href="./museum.html">Museum 1</a>
-
             </div>
         </div>
     </div>
@@ -71,14 +70,14 @@
             // var HarvordLon
             var harLatlng = new google.maps.LatLng(42.3740937, -71.1165522)
             var mapOptions = {
-            zoom: 4,
-            center: harLatlng
+                zoom: 4,
+                center: harLatlng
             }
             var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
             var marker = new google.maps.Marker({
                 position: harLatlng,
-                title:"Hello World!"
+                title: "Hello World!"
             });
 
             // To add the marker to the map, call setMap();
@@ -111,29 +110,22 @@
                     map: map,
                     title: 'Click to zoom'
                 }))
+
+
+                marker.addListener('click', function () {
+                    map.setZoom(8);
+                    map.setCenter(marker.getPosition());
+
+                });
             }
-
-
-            map.addListener('center_changed', function () {
-                // 3 seconds after the center of the map has changed, pan back to the
-                // marker.
-                window.setTimeout(function () {
-                    map.panTo(marker.getPosition());
-                }, 3000);
-            });
-
-            marker.addListener('click', function () {
-                map.setZoom(8);
-                map.setCenter(marker.getPosition());
-            });
         }
-</script>
+    </script>
 
 
 
-<div class="footer">
-    Made with love by The Virtual Architects</p>
-     </div>
+    <div class="footer">
+        Made with love by The Virtual Architects</p>
+    </div>
 
     <script src="./assets/script.js"></script>
 </body>
