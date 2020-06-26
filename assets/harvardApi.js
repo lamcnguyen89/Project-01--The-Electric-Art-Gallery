@@ -52,6 +52,7 @@ var queryHarvardURL = baseHarvardURL + artist +"&size=100&apikey=" + harvardAPIk
             } else {
                 // var artImageSrc = $("<img>").attr("src", urlImage).attr("class", "urlImage");
                 // createElements(); 
+              
                   
             };  
      };

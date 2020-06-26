@@ -48,73 +48,84 @@
 </head>
 
 <body>
+
+    <div class="navbar mapNav">
+        <a href="./index.html">Home</a>
+        <a href="./mission.html">Mission</a>
+        <a href="./map.html">Map</a>
+        <div class="dropdown">
+            <button class="dropbtn">Galleries
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="./museum.html">Museum 1</a>
+            </div>
+        </div>
+    </div>
+
     <div id="map"></div>
     <script>
+        function initMap() {
+            // var HarvordLat
+            // var HarvordLon
+            var harLatlng = new google.maps.LatLng(42.3740937, -71.1165522)
+            var mapOptions = {
+                zoom: 4,
+                center: harLatlng
+            }
+            var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
+            var marker = new google.maps.Marker({
+                position: harLatlng,
+                title: "Hello World!"
+            });
 
-        // create an object
-        var galArr = [
-            {
-                name: "Harvard Art Museum",
-                lat: "42.3740937",
-                lng: "-71.1165522"
-            },
-            {
-                name: "Metropolitan Museum of Art",
-                lat: "40.7794406",
-                lng: "-73.965438"
-            },
-        ]
+            // To add the marker to the map, call setMap();
+            marker.setMap(map);
 
-        //create a loop for object elements
-        for (let i = 0; i < galArr.length; i++) {
-            function initMap() {
-                var myLatlng = { lat: galArr[i].lat, lng: galArr[i].lng };
-                var myLatlng = new google.maps.LatLng(galArr[i].lat, galArr[i].lng);
-                var mapOptions = {
-                    zoom: 4,
-                    center: myLatlng
-                }
-                var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 4,
+                center: harLatlng
+            });
 
-                var marker = new google.maps.Marker({
-                    position: myLatlng,
-                    title: "Hello World!"
-                });
+            var galArr = [
+                {
+                    name: "Harvard Art Museum",
+                    lat: 42.3740937,
+                    lng: -71.1165522
+                },
+                {
+                    name: "Metropolitan Museum of Art",
+                    lat: 40.7794406,
+                    lng: -73.965438
+                },
+            ]
 
-                // To add the marker to the map, call setMap();
-                marker.setMap(map);
+            var markerArr = [];
 
-                var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 4,
-                    center: myLatlng
-                });
-
-                var marker = new google.maps.Marker({
-                    position: myLatlng,
+            for (let i = 0; i < galArr.length; i++) {
+                const temp = new google.maps.LatLng(galArr[i].lat, galArr[i].lng)
+                markerArr.push(new google.maps.Marker({
+                    position: new google.maps.LatLng(galArr[i].lat, galArr[i].lng),
                     map: map,
                     title: 'Click to zoom'
-                });
+                }))
 
-                map.addListener('center_changed', function () {
-                    // 3 seconds after the center of the map has changed, pan back to the
-                    // marker.
-                    window.setTimeout(function () {
-                        map.panTo(marker.getPosition());
-                    }, 3000);
-                });
 
                 marker.addListener('click', function () {
                     map.setZoom(8);
                     map.setCenter(marker.getPosition());
+
                 });
             }
         }
     </script>
 
-<div class="footer">
-    Made with love by The Virtual Architects</p>
-     </div>
+
+
+    <div class="footer">
+        Made with love by The Virtual Architects</p>
+    </div>
 
     <script src="./assets/script.js"></script>
 </body>
