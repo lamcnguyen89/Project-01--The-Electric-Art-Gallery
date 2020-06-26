@@ -10,7 +10,7 @@ html,body
 
 .navbar {
     overflow: hidden;
-    background-color rgba(104, 45, 30, 0.555);
+    background-color: rgba(104, 45, 30, 0.555);
     /* opacity: 40%; */
     font-family: Arial;
     height: 70px;
