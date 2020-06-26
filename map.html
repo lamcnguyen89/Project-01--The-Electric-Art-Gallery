@@ -65,6 +65,7 @@
     </div>
 
 
+
     <div id="map"></div>
     <script>
 
@@ -85,19 +86,28 @@
 
         //create a loop for object elements
        
+
+
         function initMap() {
             // var HarvordLat
             // var HarvordLon
             var harLatlng = new google.maps.LatLng(42.3740937, -71.1165522)
             var mapOptions = {
+
             zoom: 4,
             center: harLatlng
+
+                
+
             }
             var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
             var marker = new google.maps.Marker({
                 position: harLatlng,
-                title:"Hello World!"
+
+           
+                title: "Hello World!"
+
             });
 
             // To add the marker to the map, call setMap();
@@ -130,6 +140,7 @@
                     map: map,
                     title: 'Click to zoom'
                 }))
+
             }
 
 
@@ -137,13 +148,18 @@
                 map.setZoom(8);
                 map.setCenter(marker.getPosition());
             });
+
+            }
+
         }
 
     </script>
 
-<div class="footer">
-    Made with love by The Virtual Architects</p>
-     </div>
+
+
+    <div class="footer">
+        Made with love by The Virtual Architects</p>
+    </div>
 
     <script src="./assets/script.js"></script>
 </body>
