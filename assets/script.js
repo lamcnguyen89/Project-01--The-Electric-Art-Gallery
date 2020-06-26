@@ -1,9 +1,25 @@
 // Metropolitan Museum of Art
 // Need to input the searchbox Var once the search box has been created by other team member
-var queryURLMet = "https://collectionapi.metmuseum.org/public/collection/v1/search?q=" + artist;
-// var queryURLMet = "https://collectionapi.metmuseum.org/public/collection/v1/search?q=artistDisplayName=pizza";
-let artist = "Pablo Picasso";
+// let artist = "italy";
 
+// var queryURLMet = "https://collectionapi.metmuseum.org/public/collection/v1/search?q=artistDisplayName=pizza";
+
+let artistKey = "";
+
+
+$("#searchBtn").on("click", function() {
+
+  artistKey = $("#searchBar").val();
+  console.log("Artist:" + artistKey);
+  $("#searchBar").val("");
+
+  searchArtist(artistKey);
+
+});
+
+function searchArtist(artist) {
+  $(".gallery").empty()
+  var queryURLMet = "https://collectionapi.metmuseum.org/public/collection/v1/search?q=" + artistKey;
 // Start of API Pull Request
 $.ajax({
     url: queryURLMet,
@@ -13,7 +29,7 @@ $.ajax({
     var results = response.objectIDs;
     // var resultImage = results[0];
     console.log("Search Results - " + results);
-        for (let i = 0; i < 8 ; i++) {
+        for (let i = 0; i < 50 ; i++) {
         
     
     $.ajax({
@@ -58,4 +74,4 @@ $.ajax({
   });
 
 
-
+};
