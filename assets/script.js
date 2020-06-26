@@ -1,8 +1,8 @@
 // Metropolitan Museum of Art
 // Need to input the searchbox Var once the search box has been created by other team member
-var queryURLMet = "https://collectionapi.metmuseum.org/public/collection/v1/search?q=italy";
+var queryURLMet = "https://collectionapi.metmuseum.org/public/collection/v1/search?q=" + artist;
 // var queryURLMet = "https://collectionapi.metmuseum.org/public/collection/v1/search?q=artistDisplayName=pizza";
-
+let artist = "Pablo Picasso";
 
 // Start of API Pull Request
 $.ajax({
