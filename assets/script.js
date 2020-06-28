@@ -18,6 +18,10 @@ $("#searchBtn").on("click", function() {
 });
 
 function searchArtist(artist) {
+  
+  debugger;  
+  storeArtist(artist); //Added on 06/27 to enable storage of artists that have been searched for
+
   $(".gallery").empty()
   var queryURLMet = "https://collectionapi.metmuseum.org/public/collection/v1/search?q=" + artistKey;
 // Start of API Pull Request

@@ -62,8 +62,20 @@
                 <i class="far fa-search">Search</i>
             </button>
         
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
+            <label for="artistList" style="color:white;font-size:large;font-style:italic;background-color:black">
+                Previously searched artists, select to view their works again:</label>
+            &nbsp;
+            <select id="artistList" class="custom-select" style="width:200px;"  onselect="searchAgain()">
+            </select>
+
+
+           
+            
     </div>
+
+
 
 
  
@@ -78,6 +90,7 @@
 
  
     <script src="./assets/harvardApi.js"></script>
+    <script src="./assets/sharedScripts.js"></script>
 </body>
 
 

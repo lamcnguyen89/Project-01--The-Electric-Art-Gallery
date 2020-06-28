@@ -3,17 +3,23 @@ var baseHarvardURL = "https://api.harvardartmuseums.org/object?q=displayname:";
 
 let artistKey = "";
 
+
+
 $("#searchBtn").on("click", function() {
 
     artistKey = $("#searchBar").val();
+    //store artist in localStorage memory
     console.log("Artist:" + artistKey);
     $("#searchBar").val("");
-
+    
     searchArtist(artistKey);
 
 });
-  
+
 function searchArtist(artist) {
+        debugger;  
+        storeArtist(artist); //Added on 06/27 to enable storage of artists that have been searched for
+        
         $(".gallery").empty()
         var queryHarvardURL = baseHarvardURL + artist +"&size=100&apikey=" + harvardAPIkey;
         console.log("Harvard API URL: " + queryHarvardURL)
@@ -27,9 +33,15 @@ function searchArtist(artist) {
 
             console.log("Object Url: " + queryHarvardURL);
             console.log("Records length: " + response.records.length);
+            debugger;   //Hit F12 instead of Inspect to debug the program at large not just an area of on the page
+            if(response.records.length == 0){
+                alert('Replace with Modal\nArtist not found: ' + artist);
+                return;
+            }
             console.log("Record item example: " + JSON.stringify(response.records[0].url));
             // console.log("technique: " + response.records[0].technique)
             // console.log("Artist Name: " + response.records[0].people[0].name) ;
+            //https://api.harvardartmuseums.org/object?q=displayname:corinth&size=100&apikey=55f7f2b0-b577-11ea-a0ef-01159045190f
             
 
             // This loop will theoretically generate images by pulling down from the server:
@@ -39,6 +51,7 @@ function searchArtist(artist) {
                     var baseImage = harvardImages.baseimageurl;
                     var urlImage = harvardImages.url;
                     var artTitle = harvardImages.title;
+
                     var artistName = harvardImages.people[0].name;
                     var artistCulture = harvardImages.people[0].culture; 
 
