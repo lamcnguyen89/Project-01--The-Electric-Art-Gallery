@@ -19,7 +19,7 @@ $("#searchBtn").on("click", function() {
 function searchArtist(artist) {
         debugger;  
         storeArtist(artist); //Added on 06/27 to enable storage of artists that have been searched for
-        
+
         $(".gallery").empty()
         var queryHarvardURL = baseHarvardURL + artist +"&size=100&apikey=" + harvardAPIkey;
         console.log("Harvard API URL: " + queryHarvardURL)
@@ -35,7 +35,7 @@ function searchArtist(artist) {
             console.log("Records length: " + response.records.length);
             debugger;   //Hit F12 instead of Inspect to debug the program at large not just an area of on the page
             if(response.records.length == 0){
-                alert('Replace with Modal\nArtist not found: ' + artist);
+                alert('Artist not found: ' + artist  + "\nCheck Spelling and enter first and last names.");  
                 return;
             }
             console.log("Record item example: " + JSON.stringify(response.records[0].url));

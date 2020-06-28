@@ -43,39 +43,48 @@
 
         </div>
 
-    <div class="input-group">
+        <div class="input-group">
 
-        <input 
-            id="searchBar" 
-            type="text"
-            class="form-control"
-            placeholder= "Search"
-            class= "input-group-append"
-        >
-        
-            <button
-                id="searchBtn"
-                class="btn btn-primary"
-                type="button"
-                id="button-addon2"
+            <input 
+                id="searchBar" 
+                type="text"
+                class="form-control"
+                placeholder= "Search"
+                class= "input-group-append"
             >
+                &nbsp;
+    
+                <!-- id=button-addon2 not used and removed removed. Only 1 id allowed-->
+    
+                <button
+                    id="searchBtn"
+                    class="btn btn-primary"
+                    type="button"
+                >
                 <i class="far fa-search">Search</i>
-            </button>
-        
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-            <label for="artistList" style="color:white;font-size:large;font-style:italic;background-color:black">
-                Previously searched artists, select to view their works again:</label>
-            &nbsp;
-            <select id="artistList" class="custom-select" style="width:200px;"  onselect="searchAgain()">
-            </select>
-
-
-           
+                </button>
             
-    </div>
-
-
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+                <!-- Put some instructions on the screen regarding the list of artists -->
+    
+                <label for="artistList" style="color:white;font-size:large;font-style:italic;background-color:black">
+                    Previously searched artists, select to view their works again:</label>
+                &nbsp;
+                <select id="artistList" class="custom-select" style="width:200px;" >
+                </select>
+    
+                <button
+                    id="searchAgainBtn"
+                    class="btn btn-primary"
+                    type="button"
+                    onclick="searchAgain()" 
+                >
+                <i class="far fa-search">Search Again</i>
+                </button>
+                
+        </div>
+    
 
 
  
