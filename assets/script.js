@@ -17,8 +17,19 @@ $("#searchBtn").on("click", function() {
 
 });
 
-function searchArtist(artist) {
+function searchArtist(artist, isSearchAgain = false) { //es6 uses C# default paramenters, calling function can override
+
+
+  storeArtist(artist); //Added on 06/27 to enable storage of artists that have been searched for
+
+  if(isSearchAgain == true  && artistKey == null || artistKey.length == 0){ //artistKey is null when doing searchAgain
+    artistKey = artist;
+  }
+  
+
   $(".gallery").empty()
+  debugger;
+  console.log("$$$$ artistKey = " + artistKey);
   var queryURLMet = "https://collectionapi.metmuseum.org/public/collection/v1/search?q=" + artistKey;
 // Start of API Pull Request
 $.ajax({
@@ -40,7 +51,8 @@ $.ajax({
             var results = "https://collectionapi.metmuseum.org/public/collection/v1/objects/"
             console.log("image to be displayed: " + response.primaryImage);
             var artistName = response.artistDisplayName;
-            console.log("Artist Name: " + artistName);
+            debugger;
+            console.log("Artist Name: " + artistName + " artist = #" + artist +"#");  
             var artTitle = response.title;
             console.log("Art Title: " + artTitle);
             var artistCulture = response.culture;
@@ -72,6 +84,8 @@ $.ajax({
         
 
   });
+
+
 
 
 };
