@@ -47,6 +47,10 @@ $.ajax({
         url: "https://collectionapi.metmuseum.org/public/collection/v1/objects/" + results[i],
         method: "GET"
       }).then(function(response) {
+
+        if(response.length == 0){
+          $(".gallery").append("<p>").addClass("alerts").css("color","white").text("Artist not found. Be sure to use First and Last Name");   
+      }
             
             var results = "https://collectionapi.metmuseum.org/public/collection/v1/objects/"
             console.log("image to be displayed: " + response.primaryImage);

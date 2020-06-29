@@ -34,10 +34,11 @@ function searchArtist(artist) {
             console.log("Object Url: " + queryHarvardURL);
             console.log("Records length: " + response.records.length);
             debugger;   //Hit F12 instead of Inspect to debug the program at large not just an area of on the page
+            
             if(response.records.length == 0){
-                alert('Artist not found: ' + artist  + "\nCheck Spelling and enter first and last names.");  
-                return;
+                $(".gallery").append("<p>").addClass("alerts").css("color","white").text("Artist not found. Be sure to use First and Last Name");   
             }
+
             console.log("Record item example: " + JSON.stringify(response.records[0].url));
             // console.log("technique: " + response.records[0].technique)
             // console.log("Artist Name: " + response.records[0].people[0].name) ;
