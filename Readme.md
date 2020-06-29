@@ -38,6 +38,12 @@ Due to the recent virus pandemic we are unable to travel or gather in public spa
 * **Paul DelPadre**
 * **Lam Nguyen**
 
+## Credit Goes to:
+
+* Google
+* Metropolitan Museum of Art
+* Harvard Museum of Art
+
 ## License
 
 Public Domain
