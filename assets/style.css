@@ -193,11 +193,9 @@ font-family: 'Cinzel', serif;
   margin-bottom: 30px;
 }
 
-/* ///gallery */
+
 div.gallery {
-  /* margin: 5px; */
-  /* border: 1px solid #ccc; */
-  /* float: left; */
+  
   width: 100%;
 }
 
@@ -220,9 +218,10 @@ div.desc {
   margin-right: 7px;
   margin-top: 15px;
   border: 1px solid #ccc;
-  border-bottom: 0px; 
+  
   padding: 15px;
   text-align: center;
+  background-color: rgba(104, 45, 30, 0.555);
 }
 
 .fa-search {
