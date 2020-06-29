@@ -217,3 +217,35 @@ div.desc {
   padding: 15px;
   text-align: center;
 }
+
+.fa-search {
+  
+  float: none;
+ color: rgba(104, 45, 30, 0.555);
+ height: 15px;
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+    font-family: 'Cinzel', serif;
+ 
+}
+
+
+.custom-select{
+  color: white;
+  margin-top: 15px;
+  background-color:rgba(104, 45, 30, 0.555);
+  font-size: 15px;
+}
+
+.custom-select:hover{
+  color: white;
+  margin-top: 15px;
+  background-color:rgba(104, 45, 30, 0.555);
+  font-size: 15px;
+}
+
+input{
+  background-color:rgba(104, 45, 30, 0.555 );
+color: white;
+}
