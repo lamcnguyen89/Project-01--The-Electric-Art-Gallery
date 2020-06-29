@@ -44,6 +44,6 @@ Public Domain
 
 ## Screenshots
 
-![](Screenshot_01.PNG)
-![](Screenshot_02.PNG)
-![](Screenshot_03.PNG)
+![](/assets/Screenshot_01.PNG)
+![](/assets/Screenshot_02.PNG)
+![](/assets/Screenshot_03.PNG)
