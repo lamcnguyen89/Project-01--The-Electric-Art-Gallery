@@ -227,12 +227,10 @@ div.desc {
 .fa-search {
   
   float: none;
- color: rgba(104, 45, 30, 0.555);
- height: 15px;
-    padding: 12px 16px;
-    display: block;
-    text-align: left;
-    font-family: 'Cinzel', serif;
+  color: rgba(104, 45, 30, 0.555);
+  display: block;
+  text-align: left;
+  font-family: 'Cinzel', serif;
  
 }
 
