@@ -76,8 +76,6 @@ $.ajax({
 
       });
 
-        
-      // End of first for statement
         }        
         
 
