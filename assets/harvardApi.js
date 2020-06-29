@@ -50,7 +50,7 @@ function searchArtist(artist) {
                     var harvardImages = response.records[i];
                     var primaryImage = harvardImages.primaryimageurl;
                     var baseImage = harvardImages.baseimageurl;
-                    var urlImage = harvardImages.url;
+                    // var urlImage = harvardImages.url;
                     var artTitle = harvardImages.title;
 
                     var artistName = harvardImages.people[0].name;

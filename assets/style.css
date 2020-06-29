@@ -64,6 +64,7 @@ top: 0;
   button {
     font-size: 20px;
     font-family: 'Cinzel', serif;
+    
   }
 
   .gallery{
@@ -129,6 +130,7 @@ font-size: 20px;
 
 h1{
   font-size: 40px;
+  color: white;
   font-family: 'Cinzel', serif;
   letter-spacing: 1px;
   
