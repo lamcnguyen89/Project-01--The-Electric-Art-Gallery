@@ -18,7 +18,7 @@ $("#searchBtn").on("click", function() {
 
 function searchArtist(artist) {
         debugger;  
-        storeArtist(artist); //Added on 06/27 to enable storage of artists that have been searched for
+        storeArtist(artist); 
 
         $(".gallery").empty()
         var queryHarvardURL = baseHarvardURL + artist +"&size=100&apikey=" + harvardAPIkey;
@@ -40,9 +40,6 @@ function searchArtist(artist) {
             }
 
             console.log("Record item example: " + JSON.stringify(response.records[0].url));
-            // console.log("technique: " + response.records[0].technique)
-            // console.log("Artist Name: " + response.records[0].people[0].name) ;
-            //https://api.harvardartmuseums.org/object?q=displayname:corinth&size=100&apikey=55f7f2b0-b577-11ea-a0ef-01159045190f
             
 
             // This loop will theoretically generate images by pulling down from the server:

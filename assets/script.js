@@ -1,9 +1,3 @@
-// Metropolitan Museum of Art
-// Need to input the searchbox Var once the search box has been created by other team member
-// let artist = "italy";
-
-// var queryURLMet = "https://collectionapi.metmuseum.org/public/collection/v1/search?q=artistDisplayName=pizza";
-
 let artistKey = "";
 
 
@@ -20,7 +14,7 @@ $("#searchBtn").on("click", function() {
 function searchArtist(artist, isSearchAgain = false) { //es6 uses C# default paramenters, calling function can override
 
 
-  storeArtist(artist); //Added on 06/27 to enable storage of artists that have been searched for
+  storeArtist(artist); 
 
   if(isSearchAgain == true  && artistKey == null || artistKey.length == 0){ //artistKey is null when doing searchAgain
     artistKey = artist;
@@ -48,36 +42,36 @@ $.ajax({
         method: "GET"
       }).then(function(response) {
 
-        if(response.length == 0){
-          $(".gallery").append("<p>").addClass("alerts").css("color","white").text("Artist not found. Be sure to use First and Last Name");   
-      }
+              if(response.length == 0){
+                $(".gallery").append("<p>").addClass("alerts").css("color","white").text("Artist not found. Be sure to use First and Last Name");   
+              }
             
-            var results = "https://collectionapi.metmuseum.org/public/collection/v1/objects/"
-            console.log("image to be displayed: " + response.primaryImage);
-            var artistName = response.artistDisplayName;
-            debugger;
-            console.log("Artist Name: " + artistName + " artist = #" + artist +"#");  
-            var artTitle = response.title;
-            console.log("Art Title: " + artTitle);
-            var artistCulture = response.culture;
-            console.log("Artist Origin: " + artistCulture);
-            
-            
-            var artImageURL = response.primaryImage;
-            var artImageSrc = $("<img>").attr("src", artImageURL).attr("class", "galleryImg");
+              var results = "https://collectionapi.metmuseum.org/public/collection/v1/objects/"
+              console.log("image to be displayed: " + response.primaryImage);
+              var artistName = response.artistDisplayName;
+              debugger;
+              console.log("Artist Name: " + artistName + " artist = #" + artist +"#");  
+              var artTitle = response.title;
+              console.log("Art Title: " + artTitle);
+              var artistCulture = response.culture;
+              console.log("Artist Origin: " + artistCulture);
+              
+              
+              var artImageURL = response.primaryImage;
+              var artImageSrc = $("<img>").attr("src", artImageURL).attr("class", "galleryImg");
 
-            // creating divs to show results side by side
-                
-            var mainImgDiv = $("<div>").attr("class","desc" );
+              // creating divs to show results side by side
+                  
+              var mainImgDiv = $("<div>").attr("class","desc" );
+              
+              mainImgDiv.append("Artist Name: " + artistName)
+              mainImgDiv.append("<hr>")
+              mainImgDiv.append("Artwork Title: " + artTitle)
+              mainImgDiv.append("<hr>")
+              mainImgDiv.append("Artist Origin: " + artistCulture)
+              mainImgDiv.append(artImageSrc)
+              $(".gallery").append(mainImgDiv);
             
-            mainImgDiv.append("Artist Name: " + artistName)
-            mainImgDiv.append("<hr>")
-            mainImgDiv.append("Artwork Title: " + artTitle)
-            mainImgDiv.append("<hr>")
-            mainImgDiv.append("Artist Origin: " + artistCulture)
-            mainImgDiv.append(artImageSrc)
-            $(".gallery").append(mainImgDiv);
-            // make image clickabe
             
 
       });
