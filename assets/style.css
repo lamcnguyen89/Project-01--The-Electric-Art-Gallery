@@ -68,7 +68,7 @@ top: 0;
   }
 
   .gallery{
-    font-size: 17px;
+    font-size: 14px;
     background-color: ;
     font-family: 'Cinzel', serif;
 
@@ -133,6 +133,7 @@ h1{
   color: white;
   font-family: 'Cinzel', serif;
   letter-spacing: 1px;
+  
   
 }
 /* //////hero  */
@@ -202,6 +203,8 @@ div.gallery {
 
 .galleryImg {
   width: 100%;
+  height: 320px;
+  object-fit: cover;
 }
 
 
@@ -254,8 +257,3 @@ input{
 color: white;
 }
 
-img {
-  width: 100%;
-  height: 60%;
-  object-fit: cover;
-}
