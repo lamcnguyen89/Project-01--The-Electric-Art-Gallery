@@ -68,8 +68,6 @@ top: 0;
 
   .gallery{
     font-size: 14px;
-    margin: 0 auto;
-    width: 90%;
     font-family: 'Cinzel', serif;
 
   }
@@ -195,7 +193,7 @@ font-family: 'Cinzel', serif;
 
 
 div.gallery {
-  
+  margin: 0 auto;
   width: 100%;
 }
 
