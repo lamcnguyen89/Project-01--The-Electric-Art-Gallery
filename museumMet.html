@@ -15,79 +15,83 @@
     </head>
 
     <body>
-        <div class="hero-image">
-        <div class="navbar">
-            <a href="./index.html">Home</a>
-            <a href="./mission.html">Mission</a>
-            <a href="./map.html">Map</a>
-            <div class="dropdown">
-                <button class="dropbtn">Galleries
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="./museum.html">Harvard Art Museum</a>
-                    <a href="./museumMet.html">Metropolitan Museum of Art</a>
-                
+        <div class="center-div">
+
+                <div class="hero-image">
+                <div class="navbar">
+                    <a href="./index.html">Home</a>
+                    <a href="./mission.html">Mission</a>
+                    <a href="./map.html">Map</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">Galleries
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="./museum.html">Harvard Art Museum</a>
+                            <a href="./museumMet.html">Metropolitan Museum of Art</a>
+                        
+                        </div>
+                    </div>
                 </div>
+
+                <header>
+                    <h1 id="museumName">The Metropolitan Museum of Art</h1>
+                </header>
+
+            <div class="input-group">
+
+                <input 
+                    id="searchBar" 
+                    type="text"
+                    class="form-control"
+                    placeholder= "Search"
+                    class= "input-group-append"
+                >
+                    &nbsp;
+
+                    <button
+                        id="searchBtn"
+                        class="btn btn-primary"
+                        type="button"
+                    >
+                    <i class="far fa-search">Search</i>
+                    </button>
+                
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                
+
+                    <label for="artistList" style="color: white;" >
+                        Search History:</label>
+                    &nbsp;
+                    <select id="artistList" class="custom-select" style="width:200px; font-family: 'Cinzel', serif;" >
+                    </select>
+
+                    <button
+                        id="searchAgainBtn"
+                        class="btn btn-primary"
+                        type="button"
+                        onclick="searchAgain()" 
+                    >
+                    <i class="far fa-search">Select</i>
+                    </button>
+                    
             </div>
-        </div>
 
-        <header>
-            <h1 id="museumName">The Metropolitan Museum of Art</h1>
-        </header>
-
-    <div class="input-group">
-
-        <input 
-            id="searchBar" 
-            type="text"
-            class="form-control"
-            placeholder= "Search"
-            class= "input-group-append"
-        >
-            &nbsp;
-
-            <button
-                id="searchBtn"
-                class="btn btn-primary"
-                type="button"
-            >
-            <i class="far fa-search">Search</i>
-            </button>
+            <div class="gallery"></div>
         
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-           
 
-            <label for="artistList" style="color: white;" >
-                Search History:</label>
-            &nbsp;
-            <select id="artistList" class="custom-select" style="width:200px; font-family: 'Cinzel', serif;" >
-            </select>
 
-            <button
-                id="searchAgainBtn"
-                class="btn btn-primary"
-                type="button"
-                onclick="searchAgain()" 
-            >
-            <i class="far fa-search">Select</i>
-            </button>
+        <div class="footer">
+            Made with love by The Virtual Architects</p>
+            </div>
+
             
+        <script src="./assets/script.js"></script>
+        <script src="./assets/sharedScripts.js"></script>
+
     </div>
-
-    <div class="gallery"></div>
- 
-
-
-
-  <div class="footer">
-    Made with love by The Virtual Architects</p>
-     </div>
-
-     
-<script src="./assets/script.js"></script>
-<script src="./assets/sharedScripts.js"></script>
 </body>
 </html>
 

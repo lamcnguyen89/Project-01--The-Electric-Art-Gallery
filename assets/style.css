@@ -68,7 +68,8 @@ top: 0;
 
   .gallery{
     font-size: 14px;
-    background-color: ;
+    margin: 0 auto;
+    width: 90%;
     font-family: 'Cinzel', serif;
 
   }
@@ -251,5 +252,11 @@ div.desc {
 input{
   background-color:rgba(104, 45, 30, 0.555 );
 color: white;
+}
+
+.center-div {
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
 }
 
