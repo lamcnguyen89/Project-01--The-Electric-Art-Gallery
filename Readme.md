@@ -6,7 +6,6 @@ Once a gallery is selected the used is brought to a new html page that consists 
 -Right hand grid that artist pieces will be appended to.
 -Button to return to map
 
-### View Deployed Project Here
 [View Deployed Project Here](https://lamcnguyen89.github.io/Project-01--The-Electric-Art-Gallery/)
 
 ### Value
