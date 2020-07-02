@@ -6,6 +6,9 @@ Once a gallery is selected the used is brought to a new html page that consists 
 -Right hand grid that artist pieces will be appended to.
 -Button to return to map
 
+### View Deployed Project Here
+[View Deployed Project Here](https://lamcnguyen89.github.io/Project-01--The-Electric-Art-Gallery/)
+
 ### Value
 Users can virtually travel to galleries across the world they may not be able to visit otherwise. This can give opportunity to see work and/or inspire art lovers to travel to different galleries and explore different cultures.
 
